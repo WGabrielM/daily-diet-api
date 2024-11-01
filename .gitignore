@@ -1,0 +1,7 @@
+# Dependency directories
+node_modules/
+db/app.db
+yarn.lock
+package-lock.json
+.env.test
+build/
