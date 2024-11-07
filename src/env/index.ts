@@ -11,7 +11,7 @@ const envSchema = z.object({
     NODE_ENV: z.enum(['development', 'production', 'test']).default('production'),
     DATABASE_URL: z.string(),
     DATABASE_SSL: z.enum(['true', 'false']).default('false'),  // Add DATABASE_SSL as optional
-    PORT: z.number().default(3333),
+    PORT: z.number().default(3000),
 });
 
 const _env = envSchema.safeParse(process.env);

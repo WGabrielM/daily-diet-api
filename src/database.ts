@@ -1,14 +1,14 @@
-import { knex as setupKnex, Knex } from 'knex';
+import setupKnex, { Knex } from 'knex';
 import { env } from './env';
 
 export const config: Knex.Config = {
-    client: 'pg',  // Use 'pg' for PostgreSQL
+    client: 'pg',  
     connection: {
-        connectionString: env.DATABASE_URL,  // Use connection string for PostgreSQL
+        connectionString: env.DATABASE_URL, 
     },
     migrations: {
-        extension: 'ts',  // Migration file extension
-        directory: './db/migrations',  // Directory for migrations
+        extension: 'ts',
+        directory: './db/migrations',
     }
 };
 

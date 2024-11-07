@@ -1,8 +1,11 @@
-import fastify from 'fastify';
-import cookie from '@fastify/cookie';
+import express from "express"
+import cookieParser from 'cookie-parser';
 
+import { userController } from './controllers/userController';
 
+export const app = express();
 
-export const app = fastify();
+app.use(express.json())
+app.use(cookieParser())
 
-app.register(cookie)
+app.use('/users', userController)
